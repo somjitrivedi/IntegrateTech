@@ -1,0 +1,40 @@
+{
+  "name": "integratetech",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lightweight TypeScript + SQLite enterprise service bus",
+  "type": "module",
+  "workspaces": [
+    "packages/core",
+    "packages/conformance",
+    "packages/connector-memory",
+    "packages/connector-sqlite",
+    "packages/deploy"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:core": "vitest run --project core",
+    "test:memory": "vitest run --project connector-memory",
+    "test:sqlite": "vitest run --project connector-sqlite",
+    "test:deploy": "vitest run --project deploy"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@types/better-sqlite3": "7.6.12",
+    "@types/node": "^24.10.0",
+    "eslint": "^9.39.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.46.0",
+    "vitest": "5.1.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.27.7": true
+  }
+}

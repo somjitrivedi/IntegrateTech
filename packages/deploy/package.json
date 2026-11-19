@@ -1,0 +1,18 @@
+{
+  "name": "@integratetech/deploy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./worker-bootstrap": "./src/worker-bootstrap.ts"
+  },
+  "dependencies": {
+    "@integratetech/core": "0.1.0",
+    "typescript": "5.9.3"
+  },
+  "devDependencies": {
+    "@integratetech/connector-memory": "0.1.0",
+    "@integratetech/connector-sqlite": "0.1.0"
+  }
+}
